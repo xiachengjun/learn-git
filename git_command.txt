@@ -9,3 +9,5 @@
 HEAD指向的版本就是当前的版本，因此，Git允许我们在版本的历史之间穿梭，使用命令 git reset --hard commit_id
 穿梭前用 git log 查看提交历史，以便确定要回退到哪个版本
 要重返未来，用 git reflog 查看命令历史，以便确定要回退到未来的哪个版本
+
+使用 git diff HEAD -- readme.txt 命令可以查看工作区和版本库里面最新版本的区别
