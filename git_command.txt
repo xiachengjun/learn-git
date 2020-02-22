@@ -37,3 +37,7 @@ Git支持多种协议，包括 https 但通过 ssh 支持的原声git协议速�
 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后再提交，合并完成。
 解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。
 用 git log --graph 命令可以查看到分支合并图，例如： git log --graph --pretty=oneline --abbrev-commit
+
+修复ＢＵＧ时，我们会通过创建新的BUG分支进行修复，然后合并，最后删除
+当手头工作没有完成时，先把工作现场　git stash 一下，然后去修复BUG，修复后，再 git stash pop　回到工作现场
+在　master 分支修复的 BUG 想要合并到当前dev分支，可以用　git cherry-pick <commit_id>　命令，把bug提交的修改“复制”到当前分支，避免重复劳动
